@@ -6,14 +6,53 @@
     <link rel="icon" href="assets/icons/icon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="vendors/Bootstrap/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
     <section id="splash" class="background-black height-splash">
       <div class="">
-         <center><h1 class="letter-foodman vertical-align">Foodman</h1></center>
+         <center><h1 class="letter-foodman color-letter vertical-align">Foodmap</h1></center>
+      </div>
+    </section>
+    <!--Título-->
+    <header id="principal-header" class="hide">
+      <center><h1 class="color-letter letter-foodman">Foodmap</h1></center>
+      <!--Linea horizontal de bajo del título-->
+      <div class="container-fluid">
+        <hr>
+        <div class="cuadrado box-left"></div>
+        <div class="cuadrado box-right"></div>
+      </div>
+    </header>
+    <section id="principal-body" class="hide">
+      <div class="container-fluid">
+        <figure><img src="assets/images/map1.PNG" alt="Mapa" class="img-responsive"></figure>
+      </div>
+    </section>
+    <section class="container-fluid">
+      <center><h2 class="color-letter"><strong>Comida cerca de ti</strong></h2></center>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="filtrar restaurantes">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">
+                <span class="glyphicon glyphicon-search white" aria-hidden="true"></span>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <figure>
+          <img src="" alt="" class="img-responsive">
+          <img src="" alt="" class="img-responsive">
+          <img src="" alt="" class="img-responsive">
+          <img src="" alt="" class="img-responsive">
+          <img src="" alt="" class="img-responsive">
+        </figure>
       </div>
     </section>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
