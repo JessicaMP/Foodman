@@ -1,0 +1,24 @@
+body {
+  background-color: blue;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.background-black {
+  background-color: black;
+}
+
+.height-splash {
+  height: 669px;
+}
+
+.letter-foodman {
+  color: #c61;
+  font-weight: 100;
+  font-size: 50px;
+  margin: 0 auto;
+}
+
+.vertical-align {
+  transform: translateY(500%);
+}
