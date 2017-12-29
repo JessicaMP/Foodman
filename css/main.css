@@ -57,7 +57,7 @@ input.form-control::placeholder {
 }
 
 .mapa {
-    height: 25vh;
-    top: 0;
-    width: 100%;
+    border-style: none;
+    border-image: none;
+    min-height: 200px;
 }
