@@ -55,3 +55,9 @@ input.form-control::placeholder {
   color: black;
   font-weight: bold;
 }
+
+.mapa {
+    height: 25vh;
+    top: 0;
+    width: 100%;
+}

@@ -5,6 +5,7 @@
     <title>Foodmap</title>
     <link rel="icon" href="assets/icons/icon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="vendors/Bootstrap/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -27,8 +28,8 @@
       </div>
     </header>
     <section id="principal-body" class="hide">
-      <div class="container-fluid">
-        <figure><img src="assets/images/map1.PNG" alt="Mapa" class="img-responsive"></figure>
+      <div class="mapa" id="map">
+        <!--<figure><img src="assets/images/map1.PNG" alt="Mapa" class="img-responsive"></figure>-->
       </div>
     </section>
     <section class="container-fluid">
@@ -58,5 +59,10 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="vendors/Bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
+    <!-- api para el mapa -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?v=3.25
+        &key=YOUR_API_KEY&callback=initMap"></script>
+
   </body>
 </html>
