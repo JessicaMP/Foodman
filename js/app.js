@@ -51,7 +51,7 @@ function restaurants() {
   for (i = 0; i < data.length; i++) {
     //container.append('<div class="col-xs-5 col-md-2 box-restaurant" data-name="' + availableFood[i].name + '" data-type="' + availableFood[i].type + '" data-city="' + availableFood[i].address + '" data-toggle="modal" data-target="#myModal" ><p class="name-restaurant">' + availableFood[i].name + '</p><img class="img-restaurant"  src=' + availableFood[i].image + '><div class="opacity"></div> </div>');
     var box = $( "<div></div>");
-    box.addClass('col-xs-5 col-md-2 box-restaurant');
+    box.addClass('col-xs-5 col-md-3 box-restaurant');
     box.attr('data-name', data[i].name);
     box.attr('data-toggle', 'modal');
     box.attr('data-target', '.bs-example-modal-lg');
