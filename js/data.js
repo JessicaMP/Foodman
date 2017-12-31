@@ -120,9 +120,9 @@ var data = [{
 },
 {
   //Tragaluz
-  'name': 'Osaka',
+  'name': 'Tragaluz',
   'image': 'assets/images/food-tragaluz.jpg',
-  'local': 'assets/images/restaurante-tragaluz.jpg',
+  'local': 'assets/images/restaurante_tragaluz.jpg',
   'district': 'Miraflores',
   'address': 'Callé Los Carolinos 118',
   'money': ' $120',
@@ -132,7 +132,7 @@ var data = [{
   //La 24 Resto-Bar
   'name': 'La 24 Resto-Bar',
   'image': 'assets/images/food-la-24-resto-bar.jpg',
-  'local': 'assets/images/restaurante-tragaluz.jpg',
+  'local': 'assets/images/restaurante-la-24-resto-bar.jpg',
   'district': 'Lince',
   'address': 'Av. Arequipa 2408',
   'money': ' $48',
