@@ -4,6 +4,7 @@ $(function() {
     $('#splash').fadeOut();
     $('#principal-header').removeClass('hide');
     $('#principal-body').removeClass('hide');
+    $('#principal-content').removeClass('hide');
   }, 3500);
 });
 
@@ -42,3 +43,58 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     'Error: The Geolocation service failed.' :
     'Error: Your browser doesn\'t support geolocation.');
 }
+// Jalando Data de los restaurantes
+var container = $('#restaurant');
+var modal = $('.modal');
+// Función que muestra todos los restaurantes
+function restaurants() {
+  for (i = 0; i < data.length; i++) {
+    //container.append('<div class="col-xs-5 col-md-2 box-restaurant" data-name="' + availableFood[i].name + '" data-type="' + availableFood[i].type + '" data-city="' + availableFood[i].address + '" data-toggle="modal" data-target="#myModal" ><p class="name-restaurant">' + availableFood[i].name + '</p><img class="img-restaurant"  src=' + availableFood[i].image + '><div class="opacity"></div> </div>');
+    var box = $( "<div></div>");
+    box.addClass('col-xs-5 col-md-2 box-restaurant');
+    box.attr('data-name', data[i].name);
+    box.attr('data-toggle', 'modal');
+    box.attr('data-target', '.bs-example-modal-lg');
+    container.append(box);
+
+    var texto = $( "<p></p>");
+    texto.addClass('name-restaurant');
+    texto.text(data[i].name);
+    box.append(texto);
+
+    var image = $( "<img/>");
+    image.addClass('img-restaurant img-responsive img-thumbnail');
+    image.attr('src', data[i].image);
+    box.append(image);
+
+    var opacityBox = $( "<div></div>");
+    opacityBox.addClass('opacity');
+    box.append(opacityBox);
+  }
+}
+// Llamando a la función para al iniciar
+restaurants();
+
+// FILTRO
+$('#food').keyup(function() {
+  var restaurantName = $('#food').val();
+  if (restaurantName == '') {
+    $('#restaurant').show();
+  } else if (restaurantName) {
+    $('#restaurant').hide();
+  }
+});
+
+// Contenido Modal
+$('.box-restaurant').on('click', function() {
+  for (i = 0; i < data.length; i++) {
+    if ($(this).data('name') === data[i].name) {
+      $('.title-modal').text(data[i].name);
+      $('.restaurant-foto').attr('src', data[i].local);
+      $('.district-restaurant').text(data[i].district);
+      $('.address-restaurant').text(data[i].address);
+      $('.price-food').text(data[i].money);
+      $('.type-food').text(data[i].type);
+    }
+  }
+});

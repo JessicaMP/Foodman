@@ -13,7 +13,7 @@
   </head>
   <body>
     <section id="splash" class="background-black height-splash">
-      <div class="">
+      <div>
          <center><h1 class="letter-foodman color-letter vertical-align">Foodmap</h1></center>
       </div>
     </section>
@@ -29,43 +29,82 @@
     </header>
     <section id="principal-body" class="hide">
       <div class="container">
-        <div class="row">
-          <div class="mapa" id="map">
-            <!--<figure><img src="assets/images/map1.PNG" alt="Mapa" class="img-responsive"></figure>-->
+        <div class="row mapa-margin">
+          <div class="mapa img-thumbnail" id="map"></div>
+        </div>
+        <div class="container-fluid">
+          <center><h2 class="color-letter">Comida cerca de ti</h2></center>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="input-group">
+                <input id="food" type="text" autocomplete="off" class="form-control" placeholder="Filtrar restaurantes...">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">
+                    <span class="glyphicon glyphicon-search white" aria-hidden="true"></span>
+                  </button>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
     </section>
-    <section class="container-fluid">
-      <center><h2 class="color-letter"><strong>Comida cerca de ti</strong></h2></center>
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="filtrar restaurantes">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button">
-                <span class="glyphicon glyphicon-search white" aria-hidden="true"></span>
-              </button>
-            </span>
+    <section id="principal-content" class="container hide">
+      <!--Restaurantes-->
+        <div class="row">
+          <div class="col-xs-12 col-md-12" id="restaurant"></div>
+      </div>
+    </section>
+    <!-- Modal -->
+  <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content ">
+          <div class="modal-background">
+          <div class="modal-header">
+            <center><h1 class="title-modal"></h1></center>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body row">
+            <img class="restaurant-foto img-responsive img-thumbnail col-xs-6" alt="Restaurante">
+            <div class="col-xs-6">
+              <div>
+                  <strong><h4 class="subtitle">Distrito:</h4></strong>
+                  <strong><p class="district-restaurant text-center"></p></strong>
+                  <strong><h4 class="subtitle">Dirección:</h4></strong>
+                  <strong><p class="address-restaurant text-center"></p></strong>
+              </div>
+              <div>
+                  <strong><h4 class="subtitle">Rango de Precios:</h4></strong>
+                  <strong><p class="price-food text-center"></p></strong>
+              </div>
+              <div>
+                  <strong><h4 class="subtitle">Tipo de Comida:</h4></strong>
+                  <strong><p class="type-food text-center"></p></strong>
+              </div>
+              <button class="btn btn-lg btn-block btn-warning"><strong>Pedir Ahora</strong></button>
+            </div>
+          </div>
+          <div class="modal-footer"></div>
           </div>
         </div>
       </div>
-      <div class="col-xs-12">
-        <figure>
-          <img src="" alt="" class="img-responsive">
-          <img src="" alt="" class="img-responsive">
-          <img src="" alt="" class="img-responsive">
-          <img src="" alt="" class="img-responsive">
-          <img src="" alt="" class="img-responsive">
-        </figure>
-      </div>
-    </section>
+    </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="vendors/Bootstrap/js/bootstrap.min.js"></script>
     <!-- api para el mapa -->
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2lpYPtVZ2neRITqF_ttcAcLZMlQLERIU&callback=initMap"></script>
+    <script type="text/javascript" src="js/data.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>
