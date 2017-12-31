@@ -75,6 +75,17 @@ function restaurants() {
 // Llamando a la función para al iniciar
 restaurants();
 
+// Funcion Mouseover sobre la imagen
+$(document).ready(function(){
+  $('.opacity').mouseover(function() {
+    $(this).css('background', 'rgba(0, 0, 0, 0)');
+  });
+  $('.opacity').mouseout(function() {
+    $(this).css('background', 'rgba(0, 0, 0, 0.5)');
+  });
+});
+
+
 // FILTRO
 $('#food').keyup(function() {
   var restaurantName = $('#food').val();
