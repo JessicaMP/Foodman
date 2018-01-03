@@ -5,6 +5,7 @@ $(function() {
     $('#principal-header').removeClass('hide');
     $('#principal-body').removeClass('hide');
     $('#principal-content').removeClass('hide');
+    $('#splash').addClass('animated bounceOutLeft');
   }, 3500);
 });
 
